@@ -20,7 +20,7 @@ public class CategoryService {
     @Transactional(readOnly = true)
     public List<CategoryResponse> getAllHierarchy(){
         //전체 카테고리 계층 조회, 읽기 전용 트랜잭션
-List<Category> roots = categoryRepo.findByParentCategoryIsNull();
+        List<Category> roots = categoryRepo.findByParentCategoryIsNull();
 //부모 없는 1차 카테고리 조회
         return roots.stream().map(CategoryResponse::from)
                 .collect(Collectors.toList());
@@ -29,18 +29,18 @@ List<Category> roots = categoryRepo.findByParentCategoryIsNull();
 
     @Transactional(readOnly = true)
     public CategoryResponse getById(Long id) { //ID로 단일 카테고리 조회
-Category category = categoryRepo.findById(id)
-        .orElseThrow(() -> new IllegalArgumentException("카테고리가 존재하지 않습니다. id=" + id));
-return CategoryResponse.from(category); //DTO로 변환 후 반환
+        Category category = categoryRepo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("카테고리가 존재하지 않습니다. id=" + id));
+        return CategoryResponse.from(category); //DTO로 변환 후 반환
     }
 
     @Transactional
     public CategoryResponse create(CategoryRequest request) { //카테고리 생성, 쓰기 트랜잭션
         Category parent = null; //부모 카테고리 초기화
-if (request.getParentId() != null) {
-    parent = categoryRepo.findById(request.getParentId())
-.orElseThrow(() -> new IllegalArgumentException("부모 카테고리가 존재하지 않습니다. id=" + request.getParentId()));
-}
+        if (request.getParentId() != null) {
+            parent = categoryRepo.findById(request.getParentId())
+                    .orElseThrow(() -> new IllegalArgumentException("부모 카테고리가 존재하지 않습니다. id=" + request.getParentId()));
+        }
         Category category = Category.builder()
                 .name(request.getName()).parentCategory(parent)
                 .build();
@@ -55,8 +55,8 @@ if (request.getParentId() != null) {
                 .orElseThrow(()->new IllegalArgumentException("카테고리가 존재하지 않습니다. id=" + id));
         category.setName(request.getName());//이름 변경
         if (request.getParentId() != null) {
-Category parent = categoryRepo.findById(request.getParentId())
-        .orElseThrow(()->new IllegalArgumentException("부모 카테고리가 존재하지 않습니다. id=" + request.getParentId()));
+            Category parent = categoryRepo.findById(request.getParentId())
+                    .orElseThrow(()->new IllegalArgumentException("부모 카테고리가 존재하지 않습니다. id=" + request.getParentId()));
             category.setParentCategory(parent); // 이 줄이 빠져 있었음
         }else{
             category.setParentCategory(null); // 1차 카테고리로 변경
