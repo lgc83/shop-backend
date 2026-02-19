@@ -29,9 +29,7 @@
 
 > 프론트엔드 로그인 화면과 연동되는 인증 API 구조입니다.
 
-<p align="center">
-  <img src="./img/login.png" alt="로그인 화면" width="900" />
-</p>
+![로그인 화면](./img/login.png)
 
 ---
 
@@ -40,9 +38,7 @@
 ERP 기준정보를 기반으로  
 쇼핑몰 메인 화면에 노출되는 **상품 조회 API**를 제공합니다.
 
-<p align="center">
-  <img src="./img/main.png" alt="쇼핑몰 메인 화면" width="1100" />
-</p>
+![쇼핑몰 메인 화면](./img/main.png)
 
 ### 처리 흐름
 - 상품 목록 조회
@@ -56,9 +52,7 @@ ERP 기준정보를 기반으로
 관리자 화면에서 사용하는  
 **상품 마스터 관리용 API**를 제공합니다.
 
-<p align="center">
-  <img src="./img/admin.png" alt="쇼핑몰 관리 화면" width="1100" />
-</p>
+![쇼핑몰 관리 화면](./img/admin.png)
 
 ### 제공 기능
 - 상품 등록 / 수정 / 삭제 API
