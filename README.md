@@ -1,8 +1,8 @@
 # 🏭 ERP · MES · SHOP 연계 쇼핑몰 BACKEND 프로젝트 (진행중)
 
 > ERP–MES–SHOP 업무 흐름을 고려하여  
-> **상품 · 주문 · 재고 · 출고 흐름을 처리하는 산업자재 쇼핑몰 백엔드** 개인 프로젝트입니다.  
->  
+> **상품 · 주문 · 재고 · 출고 흐름을 처리하는 산업자재 쇼핑몰 백엔드** 개인 프로젝트입니다.
+>
 > ⚠️ 현재 ERP 기준정보 연계 및 MES 확장 구조 **고도화 진행중**입니다.
 
 ---
@@ -29,11 +29,7 @@
 
 > 프론트엔드 로그인 화면과 연동되는 인증 API 구조입니다.
 
-<p align="center">
-  <a href="./img/login.png">
-    <img src="./img/login.png" alt="로그인 화면" />
-  </a>
-</p>
+[![로그인 화면](./img/login.png)](./img/login.png)
 
 ---
 
@@ -42,11 +38,7 @@
 ERP 기준정보를 기반으로  
 쇼핑몰 메인 화면에 노출되는 **상품 조회 API**를 제공합니다.
 
-<p align="center">
-  <a href="./img/main.png">
-    <img src="./img/main.png" alt="쇼핑몰 메인 화면" />
-  </a>
-</p>
+[![쇼핑몰 메인 화면](./img/main.png)](./img/main.png)
 
 ### 처리 흐름
 - 상품 목록 조회
@@ -60,11 +52,7 @@ ERP 기준정보를 기반으로
 관리자 화면에서 사용하는  
 **상품 마스터 관리용 API**를 제공합니다.
 
-<p align="center">
-  <a href="./img/admin.png">
-    <img src="./img/admin.png" alt="쇼핑몰 관리 화면" />
-  </a>
-</p>
+[![쇼핑몰 관리 화면](./img/admin.png)](./img/admin.png)
 
 ### 제공 기능
 - 상품 등록 / 수정 / 삭제 API
@@ -105,4 +93,3 @@ ERP 기준정보를 기반으로
 
 ## 📂 패키지 구조
 
-(여기부터 작성)
