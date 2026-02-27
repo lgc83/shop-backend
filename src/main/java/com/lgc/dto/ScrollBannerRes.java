@@ -1,30 +1,34 @@
+// ✅ ScrollBannerRes.java
 package com.lgc.dto;
 
-import com.lgc.entity.TextBanner;
-import lombok.*;
+import com.lgc.entity.ScrollBanner;
+import lombok.Builder;
+import lombok.Getter;
 
 @Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-public class TextBannerRes {
+public class ScrollBannerRes {
 
     private Long id;
     private String title;
-    private String desc;
     private String imageUrl;
-    private String linkUrl;
-    private Integer sortOrder;
-    private String visibleYn; // "Y" | "N"
 
-    public static TextBannerRes from(TextBanner e) {
-        return TextBannerRes.builder()
+    private String linkUrl;
+
+    private String buttonText;
+    private String buttonLinkUrl;
+
+    private Integer sortOrder;
+    private String visibleYn;
+
+    public static ScrollBannerRes from(ScrollBanner e) {
+        return ScrollBannerRes.builder()
                 .id(e.getId())
                 .title(e.getTitle())
-                .desc(e.getDesc())
                 .imageUrl(e.getImageUrl())
                 .linkUrl(e.getLinkUrl())
+                .buttonText(e.getButtonText())
+                .buttonLinkUrl(e.getButtonLinkUrl())
                 .sortOrder(e.getSortOrder())
                 .visibleYn(e.getVisibleYn())
                 .build();

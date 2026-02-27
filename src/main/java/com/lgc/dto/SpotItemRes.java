@@ -1,28 +1,24 @@
 package com.lgc.dto;
 
-import com.lgc.entity.TextBanner;
-import lombok.*;
+import com.lgc.entity.SpotItem;
+import lombok.Builder;
+import lombok.Getter;
 
 @Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-public class TextBannerRes {
+public class SpotItemRes {
 
     private Long id;
     private String title;
-    private String desc;
     private String imageUrl;
     private String linkUrl;
     private Integer sortOrder;
-    private String visibleYn; // "Y" | "N"
+    private String visibleYn;
 
-    public static TextBannerRes from(TextBanner e) {
-        return TextBannerRes.builder()
+    public static SpotItemRes from(SpotItem e) {
+        return SpotItemRes.builder()
                 .id(e.getId())
                 .title(e.getTitle())
-                .desc(e.getDesc())
                 .imageUrl(e.getImageUrl())
                 .linkUrl(e.getLinkUrl())
                 .sortOrder(e.getSortOrder())

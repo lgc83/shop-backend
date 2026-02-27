@@ -35,8 +35,8 @@ public class ProductResponseDTO {
                 .price(e.getPrice())
                 .imageUrl(e.getImageUrl())
                 .slug(e.getSlug())
-                .categoryId(e.getCategory().getId())
-                .categoryName(e.getCategory().getName())
+                .categoryId(e.getCategory() != null ? e.getCategory().getId() : null)
+                .categoryName(e.getCategory() != null ? e.getCategory().getName() : null)
 
                 // ✅ 사이즈 매핑
                 .sizes(

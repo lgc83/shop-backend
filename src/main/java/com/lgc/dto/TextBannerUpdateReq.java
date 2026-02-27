@@ -8,8 +8,8 @@ import org.springframework.web.multipart.MultipartFile;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+public class TextBannerUpdateReq {
 
-public class TextBannerCreateReq {
     private String title;
     private String desc;
     private String linkUrl;
